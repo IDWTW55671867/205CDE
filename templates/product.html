@@ -1,0 +1,85 @@
+{% include 'layout.html' %}
+
+{% block test %}
+<div class="container">
+	<div class="row">
+
+		<div class="col-lg-3">
+			<h1 class="my-4">Shop Name</h1>
+			<div class="list-group">
+				<a href="javascript:switch_list1();" class="list-group-item">CPU</a>
+				<a href="javascript:switch_list2();" class="list-group-item">Display card</a>
+				<a href="javascript:switch_list3();" class="list-group-item">Games</a>
+			</div>
+		</div>
+
+		<div id="list1" class="col-lg-9" style="display: block;">
+			<div class="row">
+				{% for cpu_list in output_product_cpu %}
+					<div class="col-lg-4 col-md-6 mb-4">
+						<div class="card h-100">
+							<a href="#"><img class="card-img-top rounded mx-auto d-block" style="height: 150px; width: auto;" src={{ cpu_list.image_path }} alt=""></a>
+							<div class="card-body">
+								<h4 class="card-title">
+									<a href="#">{{ cpu_list.product_name }}</a>
+								</h4>
+								<h5>{{ cpu_list.price }}</h5>
+								<p class="card-text">{{ cpu_list.content }}</p>
+							</div>
+							<div class="card-footer">
+								<small class="text-muted">{{ cpu_list.footer }}</small>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+
+		<div id="list2" class="col-lg-9" style="display: none;">
+			<div class="row">
+				{% for d_card_list in output_product_d_card %}
+					<div class="col-lg-4 col-md-6 mb-4">
+						<div class="card h-100">
+							<a href="#"><img class="card-img-top rounded mx-auto d-block" style="height: 150px; width: auto;" src={{ d_card_list.image_path }} alt=""></a>
+							<div class="card-body">
+								<h4 class="card-title">
+									<a href="#">{{ d_card_list.product_name }}</a>
+								</h4>
+								<h5>{{ d_card_list.price }}</h5>
+								<p class="card-text">{{ d_card_list.content }}</p>
+							</div>
+							<div class="card-footer">
+								<small class="text-muted">{{ d_card_list.footer }}</small>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+
+		<div id="list3" class="col-lg-9" style="display: none;">
+			<div class="row">
+				{% for game_list in output_product_game %}
+					<div class="col-lg-4 col-md-6 mb-4">
+						<div class="card h-100">
+							<a href="#"><img class="card-img-top rounded mx-auto d-block" style="height: 150px; width: auto;" src={{ game_list.image_path }} alt=""></a>
+							<div class="card-body">
+								<h4 class="card-title">
+									<a href="#">{{ game_list.product_name }}</a>
+								</h4>
+								<h5>{{ game_list.price }}</h5>
+								<p class="card-text">{{ game_list.content }}</p>
+							</div>
+							<div class="card-footer">
+								<small class="text-muted">{{ game_list.footer }}</small>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+
+	</div>
+</div>
+<script src="/static/js/switch_page.js"></script>
+{% endblock test %}

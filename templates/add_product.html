@@ -1,0 +1,25 @@
+{% include 'layout.html' %}
+
+{% block test %}
+
+<form method="post" action="/add_product">
+	
+	<p>Please select the product type :</p>
+	<input type="radio" id="cpu" name="groups" value="cpu">
+	<label for="cpu">cpu</label>
+	<input type="radio" id="d_card" name="groups" value="d_card">
+	<label for="d_card">Display card</label>
+	<input type="radio" id="game" name="groups" value="game">
+	<label for="game">Game</label>
+
+	<input name="name" id="name" class="form-control" placeholder="Product Name" required>
+	<input name="price" id="price" class="form-control" placeholder="Price" required>
+	<input name="content" id="content" class="form-control" placeholder="Detail for the product" required>
+	<input name="comment" id="comment" class="form-control" placeholder="Comment for the product" required>
+
+	<p>image will insert by admin</p>
+
+	<button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+
+</form>
+{% endblock test %}

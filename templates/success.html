@@ -1,0 +1,39 @@
+{% include 'layout.html' %}
+
+{% block success %}
+
+<body>
+	<div style="text-align: center;">
+
+		<div id="list1" class="col-lg-12" style="display: block; text-align: center;">
+			<div class="row">
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="card h-100">
+						<a href="#"><img class="card-img-top rounded mx-auto d-block" style="height: 150px; width: auto;" src={{ product_img_path }} alt=""></a>
+						<div class="card-body">
+							<h4 class="card-title">
+								<a href="#">{{ product_name }}</a>
+							</h4>
+							<h5> IMAGE WILL BE INSERT BY ADMIN! </h5>
+							<h5>{{ product_price }}</h5>
+							<p class="card-text">{{ product_content }}</p>
+						</div>
+						<div class="card-footer">
+							<small class="text-muted">{{ product_comment }}</small>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div>
+			<h1>
+				<p><a href="/product">Click here to th product page</a></p>
+				<p><a href="/test">Click here to continue add product</a></p>
+			</h1>
+		</div>
+	</div>
+
+</body>
+
+
+{% endblock success %}

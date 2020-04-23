@@ -1,0 +1,76 @@
+{% block sign_up %}
+
+  <style>
+
+    body {font-family: Arial, Helvetica, sans-serif;}
+    * {box-sizing: border-box;}
+
+    /* Full-width input fields */
+    input[type=text_su], input[type=password_su] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    }
+
+    /* Add a background color when the inputs get focus */
+    input[type=text_su]:focus, input[type=password_su]:focus {
+    background-color: #ddd;
+    outline: none;
+    }
+
+    /* Set a style for all buttons */
+    .button_su {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    }
+
+    /* Add padding to container elements */
+    .container_su {
+    padding: 16px;
+    }
+
+    .signup {
+    max-width: 300px;
+    padding: 6.5px;
+    margin: 0 auto;
+    }
+
+  </style>
+
+  <body>
+ 
+    <div class="container_su">
+
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <form method="post" action="/sign_up">
+        <label for="email_su"><b>Email</b></label>
+        <input type="text_su" placeholder="Enter Email" name="email_su" required autofocus>
+
+        <label for="username_su"><b>User name</b></label>  
+        <input type="text_su" placeholder="Enter User name" name="username_su" required>
+
+        <label for="password_su_repeat"><b>Repeat Password</b></label>  
+        <input type="password_su" placeholder="Repeat Password" name="password_su" required>  
+
+        <p>By creating an account you agree to our <a href="" style="color: dodgerblue">Terms & Privacy</a>.</p>
+
+        <div class="clearfix">
+
+          <button class="button_su" type="submit">Sign Up</button>
+        </div>
+      </form>
+    </div>
+  </body>
+
+{% endblock sign_up %}

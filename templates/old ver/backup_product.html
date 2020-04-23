@@ -1,0 +1,37 @@
+{% include 'layout.html' %}
+
+{% block body %}
+
+<div class="container">
+	<div class="row">
+		<div class="col-lg-3">
+			<h1 class="my-4">Shop Name</h1>
+			<div class="list-group">
+				<a href="javascript:switch_list1();" class="list-group-item">CPU</a>
+				<a href="javascript:switch_list2();" class="list-group-item">Display card</a>
+				<a href="javascript:switch_list3();" class="list-group-item">Games</a>
+			</div>
+		</div>
+		<div id="list11" class="col-lg-9" style="display: block;">
+			<div class="row">
+				{% include 'list1.html' %}
+			</div>
+			<!-- /edd of adding card -->
+		</div>
+		<div id="list22" class="col-lg-9" style="display: none;">
+			<div class="row">
+				{% include 'list2.html' %}
+			</div>
+			<!-- /edd of adding card -->
+		</div>
+		<div id="list33" class="col-lg-9" style="display: none;">
+			<div class="row">
+				{% include 'list3.html' %}
+			</div>
+			<!-- /edd of adding card -->
+		</div>
+	</div>
+	<!-- /.row -->
+</div>
+<!--<script src="/static/js/switch_page.js"></script>-->
+{% endblock body %}

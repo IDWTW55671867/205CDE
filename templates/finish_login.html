@@ -1,0 +1,14 @@
+{% include 'layout.html' %}
+
+{% block finish_login %}
+
+	<body style="background-color: black;">
+		<h1 style="text-align: center; color: white">
+	    	<p>Your email is {{ email_li }}</p>
+	    	<p>Your password is {{ password_li }}</p>
+	    	<p>you are {{ groups }}</p>
+	    	<p><a href="/">click here to complete the login</a></p>
+    	</h1>
+	</body>
+
+{% endblock finish_login %}
